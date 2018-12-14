@@ -10,6 +10,7 @@ The primary purpose of the Fall Jungle Project is to explore ways in which we ca
 * **srPlot.py** - Contains various functions that all pertain to plotting points and jungle paths onto an image of Summoner's Rift
 * **contourMap.py** - Given a set of coordinates, creates a contour map over Summoner's Rift
 * **roleScript.py** - Determines the role for each participant in a list of matches
+* **SRFull.png** - Image of Summoner's Rift
 
 ### Data
 * **compData.pkl** - The main dataframe utilized in the code consisting of a five columns: matchID (unique identifier for each match), participantID (identifier ranging from 1-10 for each participant in a game), pos (array of x-y position coordinates from 1-6 minutes in each game), distance (distance at each coordinate from the designated reference path), difference (metric of how different the given path is from the reference path)
