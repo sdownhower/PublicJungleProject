@@ -1,0 +1,16 @@
+SELECT 
+	a.matchId, 
+	timestamp_minute, 
+	participantId, 
+	minionsKilled, 
+	positionx, 
+	positiony,  
+	jungleMinionsKilled
+FROM match_heartbeat a
+
+INNER JOIN (SELECT * from match_list where queueid = 420 and badmatch = 0 and gameVersion = '8.24.255.8524' LIMIT 100000
+) b on a.matchid = b.matchid
+
+WHERE timestamp_minute BETWEEN 1 AND 6
+
+ORDER BY matchId, participantId, timestamp_minute asc

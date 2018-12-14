@@ -1,0 +1,7 @@
+select gameVersion as game_version,
+ count(*) as n_games,
+ sum(matchRankUpdated > 0) as n_ranked,
+ max(gameCreation) as last_game
+from match_list where queueid = 420 and badmatch = 0 and gameCreation > '2018-12-01'
+group by gameVersion
+order by max(gameCreation)

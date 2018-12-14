@@ -1,0 +1,15 @@
+SELECT 
+	t1.matchId,
+	timestamp,
+	timestamp_minute,
+	eventType,
+	killerId,
+	victimId,
+	assistParticipantIds,
+	positionX,
+	positionY
+
+FROM match_event_kills t1
+
+INNER JOIN (SELECT * from match_list where queueid = 420 and badmatch = 0 LIMIT 2) t2 on t1.matchid = t2.matchid
+ORDER BY matchId, timestamp asc
