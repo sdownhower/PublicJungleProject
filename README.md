@@ -22,11 +22,11 @@ The primary purpose of the Fall Jungle Project is to explore ways in which we ca
 
 ## Nami Instructions
 
-# The Idea
+### The Idea
 
 Users will be presented with an image of summoner's rift, and be asked to identify a 2-minute position. Once they have done so, a contour map will be overalyed on top of the image of summoner's rift showing what is essentially a map of predictions for the user's 3-minute position. This contour map is generated based off of comparing the 2 and 3-minute positions from the jungle paths stored in compData.pkl to the 2-minute position given by the user. The user will then be able to select their chosen 3-minute position for the jungle path, and then they will be presented with a new contour map for their predicted 4-minute position given both the data from the 2 and 3-minute positions.
 
-# Relevant Files
+### Relevant Files
 * **SRFull.png** - Image of Summoner's Rift
 * **compData.pkl** - The pickle object containing the main dataframe that currently stores 100,000 jungle paths from patch 8.24, and it is constructed by running the comparePaths.py script. The pickle object can simply be read in to python using the pandas.read_pickle(<file-path>) function.
 * **predictPaths.py** - This is the primary script that you will need tow ork with for this data visualization data, specifically the definePath() function. The definePath() function takes an input of one or more coordinates (under the assumption that the first coordinate given is the two-minute position and the following coordinates are sequential). The outputs of this function are the following:
